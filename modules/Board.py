@@ -1,5 +1,9 @@
-from Tile import Tile
 import random
+try:
+    from Tile import Tile
+except ImportError:
+    from modules.Tile import Tile
+
 
 
 class TooManyBombsError(Exception):
