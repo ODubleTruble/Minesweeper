@@ -2,6 +2,7 @@ import pygame, sys
 from pygame.locals import *
 
 from modules.Board import Board
+from modules.Image import Image
 
 
 '''
@@ -52,7 +53,11 @@ def draw(screen):
     '''
     
     # Clears everything on the screen by making it black. 
-    screen.fill((0, 0, 0))
+    screen.fill((192,192,192))
+    
+    Image.tile_size = 100
+    screen.blit(Image.mine(), (0,0))
+    screen.blit(Image.number(1), (100,0))
 
     # Updates the display. 
     pygame.display.update()
